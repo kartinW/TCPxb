@@ -1,14 +1,18 @@
 import socket
+import threading
 
+# Connection Data
 host = '127.0.0.1'
 port = 55555
 
-server = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
-server.bind((host,port))
+# Starting Server
+server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+server.bind((host, port))
 server.listen()
 
+# Lists For Clients and Their Nicknames
 clients = []
-nickname = []
+nicknames = []
 
 # Sending Messages To All Connected Clients
 def broadcast(message):

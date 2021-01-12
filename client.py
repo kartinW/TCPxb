@@ -1,6 +1,6 @@
 import socket
 
-nickname = "xb" #input("Choose your nickname: ")
+nickname = input("Choose your nickname: ")
 
 # Connecting To Server
 client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
